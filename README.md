@@ -1,24 +1,50 @@
-# README
+# userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|
+|name|string|null: false|
+|email|string|null: false, unipue: true|
+|password|string|null: false|
+|address|string|null: false|
+|admin|boolean|null: false|
+## Association
+- has_many :baggages
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+# baggageテーブル
+|Column|Type|Options|
+|------|----|-------|
+|type|string|null: false|
+|storage_period|string|null: false
+|code|string|null: false
+## Association
+belong_to :user
 
-* System dependencies
 
-* Configuration
+Name fusion
+====
 
-* Database creation
+荷物を一時預かり、ユーザーの配達依頼があった日時に、配達するサービスを管理するシステム
 
-* Database initialization
+## Description
 
-* How to run the test suite
+## Demo
 
-* Services (job queues, cache servers, search engines, etc.)
+## VS. 
 
-* Deployment instructions
+## Requirement
 
-* ...
+## Usage
+
+## Install
+
+## Contribution
+
+## Licence
+
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+
+## Author
+
+[tcnksm](https://github.com/tcnksm)

@@ -1,0 +1,37 @@
+.wrapper
+  .display
+    .baggage__show
+      
+      .baggage__show__box
+        .baggage__show__box__label
+          追跡番号
+        .baggage__show__box__data
+          = @baggage.code
+      .baggage__show__box
+        .baggage__show__box__label
+          種類
+        .baggage__show__box__data
+          = @baggage.kind
+      .baggage__show__box
+        .baggage__show__box__label
+          保管期限
+        .baggage__show__box__data
+          = @baggage.storage_period
+          .day
+            日
+      .baggage__show__box
+        .baggage__show__box__label
+          到着日時
+        .baggage__show__box__data
+          = @baggage.created_at.strftime("%Y年%m月%d日 %H時%M分")
+
+        - if current_user.admin?
+          .baggage__show__box__edit
+            = link_to "編集", edit_admin_baggage_path(@baggage.id)
+          .baggage__show__box__destroy
+            = link_to "削除", baggage_path(@baggage), method: :delete 
+
+
+
+
+          -# = link_to(@user.name,"/admin_baggage/#{@user.id}")

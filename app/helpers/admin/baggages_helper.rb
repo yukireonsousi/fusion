@@ -1,0 +1,2 @@
+module Admin::BaggagesHelper
+end

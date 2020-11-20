@@ -1,0 +1,2 @@
+module Users::StorehousesHelper
+end

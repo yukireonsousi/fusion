@@ -1,0 +1,32 @@
+.user_name{
+  font-size: 18px;
+  color: crimson;
+}
+.user_box{
+  margin: 10px 0 0 20px;
+  display: flexbox;
+  &__field{
+    display: flexbox;
+    margin-bottom: 3px;
+    background-color: lightgray;
+    width: 200px;
+    border-radius: 3px;
+    border-style: solid;
+  }
+  &__label{
+    height: 18px;
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    background-color: darkorange;
+    text-align: center;
+    line-height: 19px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  .user_box__link{
+  font-size: x-large;
+  }
+}
+    
+  
