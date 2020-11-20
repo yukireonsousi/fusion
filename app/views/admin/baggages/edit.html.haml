@@ -1,0 +1,23 @@
+.wrapper
+
+  .disply
+    = form_with model: @baggage do |f|
+    
+      .baggage
+        .baggage__box
+          .span
+            荷物の種類
+            = f.select :kind, [["なまもの", "なまもの"], ["チルド", "チルド"], ["冷凍", "冷凍"], ["その他", "その他"]], include_blank: "選択して下さい"
+        .baggage__box
+          .span
+            保管期限
+            = f.text_field :storage_period, class: "baggage_text" , placeholder: '例)7'
+            
+        .baggage__box
+          .span
+            追跡番号
+            = f.text_field :code, class: "baggage_text", placeholder: '123456789012'
+      
+      = f.hidden_field :user_id
+
+      = f.submit 'SEND', class: "baggage__send"

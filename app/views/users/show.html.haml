@@ -1,0 +1,46 @@
+-# .wrappers
+
+-#   -# .user_name
+-#   -#   = @user.name
+-#   .user_box
+-#     - @baggages.each do |baggage|
+-#       .user_box__field
+-#         .user_box__label
+-#           追跡番号
+-#         .user_box__date
+-#           = baggage.code
+-#         .user_box__label
+-#           到着日時
+-#         .user_box__date
+-#           = baggage.created_at.strftime("%Y年%m月%d日 %H時%M分")
+-#         .user_box__link
+-#           = link_to '詳細', baggage_path(baggage.id)
+      
+-#         .user_box__post
+          
+-#         - if current_user.admin?
+-#           = check_box_tag 'delivery_data', baggage.id , baggage.delivery_data, class: "task-check"
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+-#           -# = form_with model: baggage ,method: :patch  do |f|
+-#           -#   = f.check_box :delivery_data, {cheked: baggage[:delivery_data]},true,false
+            
+           
+-#             -# = f.submit 'SEND', class: "baggage__send"
+-#     = paginate @baggages
+  
+    
+    
+   

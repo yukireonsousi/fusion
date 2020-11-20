@@ -1,0 +1,14 @@
+%h1
+  こんにちは、#{current_user.name}さん
+%p 
+  ユーザー用ページです。
+
+
+- if current_user&.admin?
+  .user_search
+    = link_to admin_baggages_path do
+      ユーザー検索
+- else
+  .user_search
+    = link_to "荷物一覧", delivery_data_baggage_path(@user) 
+    

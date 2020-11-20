@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrappers{
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  font: inherit;
+}
+  .display{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #f8f8f8;
+
+  }
+    .baggage{
+      max-width: 700px;
+      position: relative;
+      background-color:orange;
+      width: 700px;
+      margin: auto;
+      &__box{
+        height: 100%;
+        padding: 40px;
+        border-bottom: solid 2px #f8f8f8;
+        padding-left: 200px;
+      }
+      &__send{
+        padding: 20px;
+        left: 660px;
+        position: absolute;
+      }
+      &__show{
+        // display: flex;
+          background-color: white;
+          width: 700px;
+          // height: 100vh;
+          margin: auto;
+        &__box{
+          padding: 10px;
+          position: relative;
+
+          
+          &__label{
+            height: 20px;
+            font-size: 15px;
+            line-height: 19px;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+            background-color: orange;
+            color: white;
+          }
+          &__data{
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            background-color: lightblue;
+            display: flex;
+          }
+          &__edit{
+            font-size: 20px;
+            width: 100px;
+            border-style: solid;
+            border-color: orange;
+            // background-color: lightcoral;
+            position: absolute;
+            left: 10px;
+            text-align: center;
+          }
+          &__destroy{
+            font-size: 20px;
+            width: 100px;
+            border-style: solid;
+            // background-color: lightslategrey;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+          }
+        }
+      } 
+    }
+        
+

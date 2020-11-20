@@ -1,0 +1,32 @@
+.wrappers
+
+  .user_box
+    - @baggages.each do |baggage|
+      .user_box__field
+        .user_box__label
+          追跡番号
+        .user_box__date
+          = baggage.code
+        .user_box__label
+          到着日時
+        .user_box__date
+          = baggage.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        .user_box__label
+          配達
+        .user_box__date
+          = baggage.delivery_data ? '出庫' : '保管中'
+          
+
+        .user_box__link
+          = link_to baggage_path(baggage.id) do
+            %i.fa.fa-external-link-square-alt
+          
+          -# <i class="fas fa-external-link-square-alt"></i>
+            <i class="fas fa-cog"></i><i class="far fa-external-link"></i>
+        .user_box__post
+          
+        - if current_user.admin?
+          = check_box 'baggage', 'delivery_data',{checked: baggage[:delivery_data], class: "task-check",id: baggage.id}, true, false
+          %br
+            保管状況
+    = paginate @baggages

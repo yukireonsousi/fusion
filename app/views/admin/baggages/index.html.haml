@@ -1,0 +1,29 @@
+= search_form_for @search, url: admin_baggages_url do |f| 
+  = f.label :name_cont, "名前を入力してください" 
+  = f.search_field :name_cont 
+  = f.submit "検索" 
+
+.table
+  .thead
+    %tr
+      %th= sort_link(@search, :name)#resultさせてる部分とリンク
+      %th= sort_link(@search, :address)
+  .tbody
+    - @users.each do |user|#controllerの「@users = @search.result」検索したものを"返す"
+      .bar
+        %td= user.name
+        %td= user.address
+        %td= link_to "新規",new_admin_baggage_path(user_id: user.id)
+        %td= link_to "荷物一覧", delivery_data_baggage_path(user.id)#ransackは検索機能のため、deviseの登録ユーザーを探すようにuser内のindex機能が使われるため、idsと記入
+        -# %td= link_to "荷物一覧", admin_baggage_url(@baggage)
+
+  
+      
+
+
+
+
+
+
+
+
