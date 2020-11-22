@@ -22,29 +22,20 @@
 belong_to :user
 
 
-Name fusion
-====
+# アプリ名 
+## fusion
+# 概要
+ユーザーの荷物を一時的に預かるサービスの管理
+# 制作背景(意図)
+ネット通販の利用者の増加に対して、配達員の数が足りていない現状の解決
+配送所に届いた荷物を一時的に預かる事で
 
-荷物を一時預かり、ユーザーの配達依頼があった日時に、配達するサービスを管理するシステム
+①一度目の配達の数を減らせる
 
-## Description
+②お客様が取りに来られれば配達しなくていい
+​
+# 使用技術
+言語: Haml・SCSS・Ruby・Ruby on Rails・jQuery
 
-## Demo
+AWSを用いてデプロイ
 
-## VS. 
-
-## Requirement
-
-## Usage
-
-## Install
-
-## Contribution
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
-## Author
-
-[tcnksm](https://github.com/tcnksm)
