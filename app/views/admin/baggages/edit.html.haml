@@ -1,8 +1,9 @@
 .wrapper
 
   .disply
-    = form_with model: @baggage do |f|
-    
+    -# = form_with model: @baggage do |f|
+    = form_for @baggage do |f|
+      
       .baggage
         .baggage__box
           .span

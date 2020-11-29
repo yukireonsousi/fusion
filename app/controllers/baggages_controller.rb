@@ -12,7 +12,7 @@ class BaggagesController < ApplicationController
   end
 
   def new
-
+    # if current_user.admin?
       @baggage = Baggage.new(baggage_params)
       
   end
@@ -23,7 +23,7 @@ class BaggagesController < ApplicationController
     
     if @baggage.save
       
-      redirect_to pages_show_path(@baggage)
+      redirect_to baggage_path(@baggage)
     else
       
       render file: "pages/show"
@@ -37,7 +37,7 @@ class BaggagesController < ApplicationController
 
   def update
     if @baggage.update(baggage_params)
-      redirect_to pages_show_path(@baggage)
+      redirect_to baggage_path(@baggage)
     else
       render :edit
     end
@@ -91,11 +91,12 @@ end
       :kind,:storage_period, :code, :user_id )#.merge(user_id: current_user.id)
   end
 
-  def delivery_data_params
-    params.require(:baggage).permit(
-        :kind,:storage_period, :code, :user_id, :delivery_data )
-    # params.require(:ba
-  end
+  # def delivery_data_params
+  #   params.require(:baggage).permit(
+  #       :kind,:storage_period, :code, :user_id, :delivery_data )
+  #   # params.require(:ba
+  # end
+  
   # def move_to_index
   #   redirect_to action: :index unless user_signed_in? && current_user.id == @baggage.user_id || current_user.admin
   # end
