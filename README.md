@@ -39,3 +39,16 @@ belong_to :user
 
 AWSを用いてデプロイ
 
+# テストアカウント
+
+  Name
+  管理者
+  Address
+  神奈川県鎌倉市小町111
+  Email
+  admin@example.jp
+  Password
+  11111111
+
+  画面収録 2020-12-11 19.08.35.mov.gif
+
