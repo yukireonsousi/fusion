@@ -52,5 +52,7 @@ AWSを用いてデプロイ
   
 # プレビュー
 
-  ![画面収録 2020-12-11 19 08 35 mov](https://user-images.githubusercontent.com/63407796/101977177-08c43b80-3c8f-11eb-8742-ef0d35bdd288.gif)
+![画面収録 2020-12-12 17 02 42 mov](https://user-images.githubusercontent.com/63407796/101978960-6448f600-3c9c-11eb-9d00-795b6705213f.gif)
 
+
+  
